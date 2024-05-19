@@ -1,0 +1,55 @@
+baseURL = "http://localhost/"
+title = "Shell"
+ignoreErrors = ["error-remote-getjson"]
+
+[module]
+  [[module.imports]]
+    path = 'github.com/yukuro/hugo-theme-shell'
+
+[params]
+  description = "morthimer's Portfolio"
+  [params.Terminal]
+  schema = "gruvbox_dark"
+
+  userName = "guest"
+  pcName = "morthimer.fr"
+  workDir = "www"
+  profile = "profile.txt"
+
+  ps1Delay = 20
+  stdoutDelay = 20
+  commandDelay = 40
+  
+  titleDelay = 0
+  contentDelay = 0
+
+  description = """
+  Greetings!
+  I'm morthimer.
+
+  Skills:
+  - Docker, Kubernetes
+  - Python, Bash, Go
+  - Ansible, Terraform
+  - GitLab CI, GitHub Actions, ArgoCD
+  - Prometheus, Loki, Grafana
+  """
+
+  [params.Tree]
+  use = true
+  folderName = "links"
+  files = [ 
+    ["Git", "https://git.morthimer.fr"],
+    ["Wiki", "https://wiki.morthimer.fr"],
+  ]
+
+  [params.Tree2]
+  use = true
+  folderName = "bookmarks"
+  files = [
+    ["IT Roadmaps", "https://roadmap.sh/"],
+    ["DevOps Training", "https://github.com/bregman-arie/devops-exercises"],
+    ["Awesome Content","https://github.com/sindresorhus/awesome"],
+    ["server-world.info","https://www.server-world.info/en/"],
+    ["The Brutalist Report", "https://brutalist.report/" ],
+  ]
