@@ -11,10 +11,12 @@ jobs:
     steps:
       - name: Repository checkout
         uses: actions/checkout@v4
+
       - name: Lint Dockerfile with Hadolint
         uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: Dockerfile
+          failure-threshold: error
 
   build:
     runs-on: ubuntu-latest
