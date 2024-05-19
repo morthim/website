@@ -35,6 +35,6 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKER_REGISTRY }}/${{ gitea.repository }}:latest
-            ${{ secrets.DOCKER_REGISTRY }}/${{ gitea.repository }}:${{ gitea.tag }}
+            ${{ secrets.DOCKER_REGISTRY }}/${{ gitea.repository }}:${{ gitea.ref_name }}
           build-args: |
-            img_ver=${{ gitea.tag }}
+            img_ver=${{ gitea.ref_name }}
