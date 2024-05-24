@@ -1,0 +1,8 @@
+<head>
+    <title>{{- if .IsHome }}{{ .Site.Title }}{{- else }}{{ .Title }}{{- end }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+    <script defer src="https://{{ $.Site.Params.analytics.src }}/script.js" data-website-id="{{ $.Site.Params.analytics.id }}"></script>
+    {{ partial "partials/style.html" . }}
+</head>

@@ -1,6 +1,8 @@
 FROM alpine:3
 
 ARG img_ver
+ARG analytics_src
+ARG analytics_id
 ENV IMAGE_VERSION ${img_ver}
 
 LABEL org.opencontainers.image.title="Website" \
@@ -24,6 +26,8 @@ RUN hugo new site www \
  && hugo mod init git.morthimer.fr
 COPY --chown=morthimer:morthimer rootfs/ /
 WORKDIR /home/morthimer/www
+RUN sed -i "s/ANALYTICS_SRC_PLACEHOLDER/${analytics_src}/g" hugo.toml \
+ && sed -i "s/ANALYTICS_ID_PLACEHOLDER/${analytics_id}/g" hugo.toml
 
 EXPOSE 1313
 ENTRYPOINT [ "hugo" ]

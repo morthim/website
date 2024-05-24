@@ -38,3 +38,5 @@ jobs:
             ${{ secrets.DOCKER_REGISTRY }}/${{ gitea.repository }}:${{ gitea.ref_name }}
           build-args: |
             img_ver=${{ gitea.ref_name }}
+            analytics_src=${{ secrets.ANALYTICS_SRC }}
+            analytics_id=${{ secrets.ANALYTICS_ID }}

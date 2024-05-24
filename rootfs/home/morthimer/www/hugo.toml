@@ -8,6 +8,7 @@ ignoreErrors = ["error-remote-getjson"]
 
 [params]
   description = "morthimer's Portfolio"
+
   [params.Terminal]
   schema = "gruvbox_dark"
 
@@ -16,9 +17,9 @@ ignoreErrors = ["error-remote-getjson"]
   workDir = "www"
   profile = "profile.txt"
 
-  ps1Delay = 20
-  stdoutDelay = 20
-  commandDelay = 40
+  ps1Delay = 10
+  stdoutDelay = 15
+  commandDelay = 20
   
   titleDelay = 0
   contentDelay = 0
@@ -53,3 +54,7 @@ ignoreErrors = ["error-remote-getjson"]
     ["server-world.info","https://www.server-world.info/en/"],
     ["The Brutalist Report", "https://brutalist.report/" ],
   ]
+
+  [params.analytics]
+  src = "ANALYTICS_SRC_PLACEHOLDER"
+  id = "ANALYTICS_ID_PLACEHOLDER"
